@@ -1,0 +1,41 @@
+item = {
+
+    'name': 'John Doe',
+
+    'age': 30,
+
+    'email': 'john@example.com',
+
+    'interests': ['reading', 'coding', 'hiking'],
+
+    'address': {
+
+        'street': '123 Main St',
+
+        'city': 'Anytown',
+
+        'state': 'CA',
+
+        'zip': '12345'
+
+    }
+
+}
+
+
+size_info = calculate_size(item)
+
+print(f"Size in bytes: {size_info['size']}")
+
+print(f"Required RCUs: {size_info['rcu']}")
+
+print(f"Required WCUs: {size_info['wcu']}")
+
+
+if is_under_limit(item):
+
+    print("Item size is within the 400 KB limit.")
+
+else:
+
+    print("Item size exceeds the 400 KB limit.")
